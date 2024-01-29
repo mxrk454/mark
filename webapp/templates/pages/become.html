@@ -1,0 +1,79 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeopleCloud Sign Up</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .email {
+            color: #3498db;
+        }
+
+        .instructions {
+            margin-top: 20px;
+        }
+
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .roles {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to PeopleCloud!</h1>
+        <p>Ready to launch your career into the stratosphere?</p>
+        <p class="email">Email services@peoplecloud.net</p>
+        <p class="instructions">and send a portfolio, updated resume, and cover letter with the subject <span class="highlight">Applying — (Role)</span> so we can create an account.</p>
+        
+        <br>
+        <br>
+        <br>
+        <div class="roles">
+            <p>We're looking for talented individuals in the following roles:</p>
+            <ul>
+                <li>Web Developer</li>
+                <li>Software Engineer</li>
+                <li>Marketing Specialist</li>
+               
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
+
+{% endblock %}

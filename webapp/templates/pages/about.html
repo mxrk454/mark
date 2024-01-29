@@ -1,0 +1,95 @@
+{% extends 'pages/index.html' %}
+{% block content %}
+<head>
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+
+        .c1 {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+
+        .member-details {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            z-index: 1;
+            text-align: left;
+        }
+
+        .team-member:hover .member-details {
+            display: block;
+        }
+
+        @media only screen and (max-width: 600px) {
+            section {
+                padding: 0.5em;
+            }
+        }
+
+          .team-member img {
+                width: 100px;
+                height: 100px;
+            }
+
+
+    </style>
+</head>
+<body>
+
+
+<h1>About Us</h1>
+<br>
+<br>
+
+
+    <section class = c1>
+        <h2>Our Story</h2>
+        <br>
+        <p>Welcome to People Cloud, where we believe in the power of people. Our journey began with a vision to create a client-centric organization that goes beyond traditional services. We understand that every client is unique, and our mission is to tailor our solutions to meet their specific needs.</p>
+        <br>
+        <p>People Cloud was founded on the principles of collaboration, innovation, and a relentless commitment to client success. We believe in building lasting relationships with our clients, becoming a trusted partner on their journey to growth and excellence.</p>
+        <br>
+        <p>Our team is a diverse group of talented individuals who bring passion and expertise to every project. We embrace challenges as opportunities for learning and improvement, and we are dedicated to staying at the forefront of industry trends and technologies.</p>
+        <br>
+        <p>At People Cloud, the client is at the center of everything we do. We strive to exceed expectations, delivering not just services, but transformative experiences. Join us on this exciting adventure, and let's create success together.</p>
+        <br>
+    </section>
+
+</body>
+{% endblock %}

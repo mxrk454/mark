@@ -1,0 +1,105 @@
+{% extends 'pages/index.html' %}
+
+{% block content %}
+   <header>
+        <h1></h1>
+   <style>
+    * {
+        margin: 0;
+        padding: 0;}
+    body {
+        background-color: #ffffff;
+        background-size: cover;
+        font-family: Arial, sans-serif;}
+    header {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #ffffff;
+        color: #fff;}
+    .container {
+        text-align: center;
+        padding: 20px;}
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;}
+    hr {
+        border: 1px solid #ccc;
+        margin: 20px 0;}
+    .services {
+        display: flex;
+        justify-content: space-around;}
+    .service {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #ffffff;
+        background-image: url("webapp/static/images/bg.jpg");}
+    .about {
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;}
+
+    @media (max-width: 768px) {
+        .services {
+            flex-direction: column;
+        }
+        .service {
+            border: none;
+            margin: 10px 0;
+        }
+    }
+</style>
+    </header>
+    <div class="container">
+        <h2>Welcome to people Cloud</h2>
+        <p id="javademo">Find the perfect job or hire the right talent.</p>
+        <button type="button" onclick="myFunction()">Get Started</button>
+    </div>
+    <hr>
+    <body>
+    <section class="services">
+        <div class="service">
+            <h2>Performance Management</h2>
+            <br>
+            <br>
+            <p>HR departments play a crucial role in employee performance management.
+                They help establish performance goals and conduct regular performance reviews.
+                HR professionals provide feedback, support, and guidance to employees to help
+                them improve their performance and contribute effectively to the organization.</p>
+        </div>
+        <div class="service">
+            <h2>Employee Benefit Administration</h2>
+            <br>
+            <p>HR is responsible for managing employee benefits programs,
+                such as health insurance, retirement plans, and other perks.
+                They help employees enroll in these programs, address benefits-related inquiries,
+                and ensure compliance with relevant regulations.</p>
+        </div>
+        <div class="service">
+            <h2>Recruitment and Staffing</h2>
+            <br>
+            <br>
+            <p>HR departments often manage the recruitment and staffing processes.
+                This includes creating job postings, screening resumes, conducting interviews,
+                and selecting suitable candidates for open positions. They also handle onboarding
+                and orientation for new employees.</p>
+        </div>
+    </section>
+    <hr>
+    <section class="about">
+        <h2>About Us</h2>
+        <p>At People Cloud HR Solutions, we are dedicated to revolutionizing
+            the world of human resources with innovative technology and expert
+            consulting. Our mission is to empower businesses to effectively
+            manage their workforce, streamline HR processes, and foster a culture
+            of success and growth.</p>
+    </section>
+    </body>
+
+
+
+
+{% endblock %}

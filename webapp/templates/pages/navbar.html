@@ -1,0 +1,73 @@
+{% load static %}
+
+<head>
+    <title>People Cloud</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css/' %}">
+  <style>
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+    }
+
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #ffffff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+
+    .search-container {
+      float: right;
+    }
+
+    .search-input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 8px;
+    }
+
+
+    .search-icon {
+      float: right;
+      padding: 15px;
+      background: #333;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .logo {
+        float: left;
+        padding: 15px 50px;
+
+    }
+  </style>
+</head>
+<body>
+<div class="navbar">
+  <div class="logo">
+    <image alt="logo" width="80" height="80" class=" align-text-top" src="{% static '/images/peoplecloud_1.png' %}"></image>
+  </div>
+  <a href="{% url 'homePage' %}">Home</a>
+  <a href="{% url 'aboutPage' %}">About</a>
+  <a href="{% url 'howPage' %}">How It Works</a>
+  <a href="{% url 'browsePage' %}">Browse Professionals</a>
+  <a href="{% url 'becomePage' %}">Become a Professional</a>
+  <a href="/admin">Admin</a>
+
+
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search">
+    <button class="search-icon">&#128269</button>
+  </div>
+</div>
+
+</body>

@@ -1,0 +1,127 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css/' %}">
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.bg-body-tertiary {
+    background-color: #094db4; /* Change the color as needed */
+}
+
+.text-white {
+    color: #fff; /* Change the color as needed */
+}
+
+.py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+.list-inline {
+    list-style: none;
+    padding: 0;
+}
+
+.list-inline-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fa-github:before {
+    content: "\f09b";
+}
+
+.fa-facebook:before {
+    content: "\f09a";
+}
+
+.fa-X:before {
+    content: "X";
+}
+
+.fa-envelope:before {
+    content: "\f0e0";
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+}
+
+.contact {
+    text-align: center;
+}
+
+.list-inline {
+    margin-top: 15px;
+}
+
+.contact h4 {
+    margin-bottom: 10px;
+}</style>
+
+<footer class="bg-body-tertiary text-white text-center py-3" data-bs-theme="dark">
+    <p>&copy; People Cloud</p>
+    <ul class="list-unstyled list-inline">
+        <li class="list-inline-item">
+            <a href="https://github.com" target="_blank">
+                <i class="fa fa-github"></i> GitHub </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://www.facebook.com/peoplecloudhrservices" target="_blank">
+                <i class="fa fa-facebook"></i> Facebook </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://www.x.com" target="_blank">
+                <i class="fa fa-X"></i> X </a>
+        </li>
+    </ul>
+    <br>
+
+    <section class="contact">
+        <h4>Contact Us</h4>
+        <ul class="list-inline">
+        <li>
+            <a href="https://www.gmail.com" target="_blank">
+                <i class="fa fa-envelope"></i> services@peoplecloud.com</a>
+        </li>
+    </ul>
+    </section>
+</footer>

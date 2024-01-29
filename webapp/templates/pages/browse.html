@@ -1,0 +1,149 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block content %}
+
+<div style="margin-top: 50px;" class="container">
+	<div class = "row">
+
+		<div class = "col">
+			<div class = "col-md">
+				<div class = "card text-center text-white mb-3" id = "total-orders">
+					<div class = "card-header">
+						<h5 class = "card-title">Total Employees</h5>
+					</div>
+					<div class = "card-body">
+						<h3 class = "card-title">{{total_employee}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class = "col">
+			<div class="col-md">
+				<div class="card text-center text-white mb-3" id = "total-delivered">
+					<div class = "card-header">
+						<h5 class = "card-title">Clients</h5>
+					</div>
+					<div class = "card-body">
+						<h3 class = "card-title">{{total_client}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class = "col">
+			<div class="col-md">
+				<div class="card text-center text-white mb-3" id = "total-pending">
+					<div class = "card-header">
+						<h5 class = "card-title">Contract Accepted</h5>
+					</div>
+					<div class = "card-body">
+						<h3 class = "card-title">{{accepted}}</h3>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class = "col">
+			<div class="col-md">
+				<div class="card text-center text-white mb-3" id = "total-pending">
+					<div class = "card-header">
+						<h5 class = "card-title">Contract Pending</h5>
+					</div>
+					<div class = "card-body">
+						<h3 class = "card-title">{{pending}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<div class="container bg-dark">
+    <div class="row">
+
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 text-info">Browse Professionals</h5>
+					<br>
+					<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+						<input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+					  </form>
+					  <br>
+                    <a href="{% url 'becomePage' %}" class="btn btn-info">Become Professional</a>
+                    <br>
+                </div>
+                <br>
+                <div class="table-responsive">
+                    <table class="table table-hover table-dark table mx-auto d-bloc">
+						
+                        <thead>
+                            <tr>
+                                <th scope="col">Profile Picture</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Created Date</th>
+                                <th class="text-end">Action</th>
+                            </tr>
+                        </thead>
+						<br>
+                        <tbody>
+                            <tr>
+								{% for employee in employees %}
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="{{ employees.profile_picture.url }}" class="avatar sm rounded-pill me-3 flex-shrink-0" alt="Employee">
+                                   
+                                    </div>
+                                </td>
+                                <td class="text-white">{{employee.email}}</td>
+                                <td> <span class="d-inline-block align-middle text-white">{{employee.phone}}</span></td>
+                                <td class="text-white">{{employee.date_created}}</td>
+                                <td class="text-end">
+                                
+                                </td>
+                            </tr>
+							{% endfor %}
+                        </tbody>
+                    </table>
+        </div>
+    </div>
+</div>
+	<div class="container bg-dark py-5">
+		<div class="main-body">
+		<div class="row mb-4">
+		  <div class="col-lg-5">
+			<h2 class="display-4 font-weight-light text-white">Clients</h2>
+		  </div>
+		</div>
+		<div class="row text-center mx-auto">
+			{% for employee in employees %}
+				<div class="col-xl-3 col-sm-6 mb-5">
+					<div class="bg-white rounded shadow-sm py-5 px-4">
+						<img src="{{ profile_picture.url }}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+						<h5 class="mb-0">{{ employees.pen_name }}</h5>
+						<span class="small text-uppercase text-muted">
+							<ul class="social mb-0 list-inline mt-3">
+								{% for group in employee.group.all %}
+									<li class="list-inline-item">{{ group.name }}</li>
+								{% endfor %}
+							</ul>
+						</span>
+						<ul class="social mb-0 list-inline mt-3">
+							<li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+							<li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+							<li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+							<li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		  
+		</div>
+	  </div>
+	</div>
+	
+
+{% endblock %}
